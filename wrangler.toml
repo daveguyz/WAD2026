@@ -1,0 +1,24 @@
+# =====================================================================
+# CampusPulse - Cloudflare deployment (Workers + D1 + Static Assets)
+# Deploy:  see docs/DEPLOY-CLOUDFLARE.md
+# =====================================================================
+name = "campuspulse"
+main = "cloudflare/worker.js"
+compatibility_date = "2025-09-01"
+
+# Front end (unchanged HTML/CSS/JS) served from ./public
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true        # worker handles /api, security headers and protected pages
+html_handling = "none"         # keep the .html URLs the site already links to
+not_found_handling = "none"
+
+# Relational database (Cloudflare D1, SQLite dialect)
+[[d1_databases]]
+binding = "DB"
+database_name = "campuspulse-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[observability]
+enabled = true

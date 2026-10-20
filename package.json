@@ -6,9 +6,19 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "setup-db": "node database/setup.js"
+    "setup-db": "node database/setup.js",
+    "cf:dev": "wrangler dev",
+    "cf:db:local": "wrangler d1 execute campuspulse-db --local --file=cloudflare/d1/schema.sql && wrangler d1 execute campuspulse-db --local --file=cloudflare/d1/seed.sql",
+    "cf:db:remote": "wrangler d1 execute campuspulse-db --remote --file=cloudflare/d1/schema.sql && wrangler d1 execute campuspulse-db --remote --file=cloudflare/d1/seed.sql",
+    "cf:deploy": "wrangler deploy"
   },
-  "keywords": ["nust", "campus", "events", "express", "mysql"],
+  "keywords": [
+    "nust",
+    "campus",
+    "events",
+    "express",
+    "mysql"
+  ],
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -18,5 +28,10 @@
     "helmet": "^7.2.0",
     "mysql2": "^3.11.5"
   },
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "wrangler": "^4.42.0"
+  }
 }

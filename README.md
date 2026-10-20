@@ -52,6 +52,10 @@ CampusPulse is a dynamic web application that solves a real problem for NUST stu
 
 Seed event dates are relative to the day you run `npm run setup-db`, so the demo always has upcoming events. Re-run it before the presentation to reset all data.
 
+### Online version (Cloudflare)
+
+The same app also runs on **Cloudflare Workers + D1** (a relational, SQLite-based database), using the code in `cloudflare/` and `wrangler.toml`. Steps are in [`docs/DEPLOY-CLOUDFLARE.md`](docs/DEPLOY-CLOUDFLARE.md). In short: `npm install`, `npx wrangler login`, `npx wrangler d1 create campuspulse-db` (paste the ID into `wrangler.toml`), `npm run cf:db:remote`, `npm run cf:deploy`.
+
 ---
 
 ## 3. Project structure
@@ -90,7 +94,12 @@ campuspulse/
 │   ├── css/admin.css       # admin layout
 │   ├── js/                 # main.js, validation.js + one script per page
 │   └── images/             # logo and illustrations (SVG)
+├── cloudflare/
+│   ├── worker.js           # Cloudflare Workers version of the API (same endpoints)
+│   └── d1/                 # schema.sql + seed.sql for Cloudflare D1 (SQLite)
+├── wrangler.toml           # Cloudflare config (Worker + D1 + static assets)
 └── docs/
+    ├── DEPLOY-CLOUDFLARE.md
     ├── ERD.svg / ERD.png   # entity relationship diagram
     ├── wireframes/         # low-fidelity wireframes (SVG + PNG)
     └── screenshots/        # screenshots of the running system
