@@ -18,7 +18,7 @@ not_found_handling = "none"
 [[d1_databases]]
 binding = "DB"
 database_name = "campuspulse-db"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "4aa54335-e892-40db-953b-d22aa3a79e87"
 
 [observability]
 enabled = true
