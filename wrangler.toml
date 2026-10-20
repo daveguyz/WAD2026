@@ -2,7 +2,7 @@
 # CampusPulse - Cloudflare deployment (Workers + D1 + Static Assets)
 # Deploy:  see docs/DEPLOY-CLOUDFLARE.md
 # =====================================================================
-name = "campuspulse"
+name = "nust-campuspulse"
 main = "cloudflare/worker.js"
 compatibility_date = "2025-09-01"
 
