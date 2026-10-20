@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusPulse is the NUST student hub for discovering, hosting and registering for campus events, clubs and activities.">
+  <meta name="theme-color" content="#0b2a5b">
+  <title>Home | CampusPulse - NUST Campus Connect</title>
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/js/home.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/index.html" aria-label="CampusPulse home">
+        <img src="/images/logo.svg" alt="" width="38" height="38">
+        <span>Campus<b>Pulse</b></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/submit-event.html">Host an Event</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-auth" id="nav-auth"></div>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div>
+          <p class="badge badge-pending">NUST Campus Connect</p>
+          <h1 id="hero-title">Never miss what's <em>happening</em> on campus.</h1>
+          <p class="lead">CampusPulse brings every NUST event, club meeting, workshop and sports fixture into one place. Find something to do, save your seat in one click, or host your own event.</p>
+          <form class="hero-search" action="/events.html" method="get" role="search">
+            <label for="hero-q" class="visually-hidden">Search events</label>
+            <input type="search" id="hero-q" name="q" placeholder="Search hackathons, sports, career fairs..." autocomplete="off">
+            <button class="btn btn-accent" type="submit">Search</button>
+          </form>
+          <div class="hero-stats" id="hero-stats" aria-live="polite">
+            <div><strong data-stat="upcoming_events">-</strong><span>Upcoming events</span></div>
+            <div><strong data-stat="students">-</strong><span>Students joined</span></div>
+            <div><strong data-stat="registrations">-</strong><span>Seats booked</span></div>
+          </div>
+        </div>
+        <figure class="hero-image">
+          <img src="/images/hero.svg" alt="Illustration of students gathering at a campus event" width="480" height="420">
+        </figure>
+      </div>
+    </section>
+
+    <!-- UPCOMING EVENTS -->
+    <section class="section" aria-labelledby="upcoming-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="upcoming-title">Upcoming events</h2>
+            <p>The next things happening around campus.</p>
+          </div>
+          <a class="btn btn-outline" href="/events.html">See all events</a>
+        </div>
+        <div class="grid grid-3" id="upcoming-grid">
+          <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section section-alt" aria-labelledby="cat-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="cat-title">Browse by category</h2>
+            <p>From study sessions to soccer - pick what interests you.</p>
+          </div>
+        </div>
+        <div class="grid grid-4" id="category-grid"></div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" aria-labelledby="how-title">
+      <div class="container grid grid-2">
+        <div>
+          <h2 id="how-title">How CampusPulse works</h2>
+          <p class="text-muted">Finding out about campus events used to mean scrolling through dozens of WhatsApp groups and faded posters. Now it takes three steps.</p>
+          <ol class="steps">
+            <li><div><h3>Create your free account</h3><p class="mb-0 text-muted">Sign up with your NUST student number in under a minute.</p></div></li>
+            <li><div><h3>Discover and register</h3><p class="mb-0 text-muted">Search and filter events, then reserve your seat with one click.</p></div></li>
+            <li><div><h3>Host your own event</h3><p class="mb-0 text-muted">Clubs and societies submit events; admins review and publish them.</p></div></li>
+          </ol>
+        </div>
+        <div class="grid grid-2">
+          <article class="card feature-card">
+            <div class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+            <h3>Smart search</h3>
+            <p class="mb-0 text-muted">Filter by category, venue, date and price.</p>
+          </article>
+          <article class="card feature-card">
+            <div class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>One-click RSVP</h3>
+            <p class="mb-0 text-muted">Capacity is tracked live so events never overfill.</p>
+          </article>
+          <article class="card feature-card">
+            <div class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+            <h3>Personal dashboard</h3>
+            <p class="mb-0 text-muted">All your bookings and hosted events in one view.</p>
+          </article>
+          <article class="card feature-card">
+            <div class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Moderated</h3>
+            <p class="mb-0 text-muted">Every event is reviewed by an administrator.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Running a club or society?</h2>
+            <p>Reach every NUST student by publishing your next event on CampusPulse.</p>
+          </div>
+          <a class="btn btn-primary" href="/submit-event.html">Host an event</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <a class="brand" href="/index.html"><img src="/images/logo.svg" alt="" width="34" height="34"><span>Campus<b>Pulse</b></span></a>
+          <p>The heartbeat of student life at NUST. Discover, host and register for campus events, clubs and activities in one place.</p>
+        </section>
+        <nav aria-label="Explore">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/events.html">Browse events</a></li>
+            <li><a href="/submit-event.html">Host an event</a></li>
+            <li><a href="/dashboard.html">My dashboard</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Information">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/about.html#faq">FAQ</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <section>
+          <h4>Contact</h4>
+          <address>
+            <span>Namibia University of Science and Technology</span>
+            <span>13 Jackson Kaujeua Street, Windhoek</span>
+            <a href="mailto:campuspulse@nust.na">campuspulse@nust.na</a>
+            <a href="tel:+26461207911">+264 61 207 9111</a>
+          </address>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span data-year>2026</span> CampusPulse &middot; WAD621S Group Project</p>
+        <p class="mb-0">Built with HTML, CSS, JavaScript, Node.js &amp; MySQL</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

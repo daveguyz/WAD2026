@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your free CampusPulse account with your NUST student number.">
+  <meta name="theme-color" content="#0b2a5b">
+  <title>Create account | CampusPulse - NUST Campus Connect</title>
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/js/validation.js" defer></script>
+  <script src="/js/register.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/index.html" aria-label="CampusPulse home">
+        <img src="/images/logo.svg" alt="" width="38" height="38">
+        <span>Campus<b>Pulse</b></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/submit-event.html">Host an Event</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-auth" id="nav-auth"></div>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main" class="auth-layout">
+    <aside class="auth-aside">
+      <h2>Join the NUST campus community</h2>
+      <p>With a free account you can:</p>
+      <ul>
+        <li>Register for events and track your bookings</li>
+        <li>Host events for your club or society</li>
+        <li>Get a personal dashboard of everything you're attending</li>
+      </ul>
+      <img src="/images/hero.svg" alt="" width="340" height="300">
+    </aside>
+
+    <div class="auth-main">
+      <div class="card">
+        <h1 class="h2">Create your account</h1>
+        <p class="text-muted">It takes less than a minute.</p>
+        <div class="alert alert-error" id="form-alert" role="alert" hidden></div>
+
+        <form id="register-form" novalidate>
+          <div class="form-group">
+            <label for="full_name">Full name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="full_name" name="full_name" autocomplete="name" maxlength="100" required placeholder="e.g. Ndapewa Shikongo">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student_number">Student number <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="student_number" name="student_number" inputmode="numeric" pattern="\d{9}" maxlength="9" required placeholder="224012345">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone <small class="text-muted">(optional)</small></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="081 123 4567">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="200000@nust.na">
+            <p class="hint">Tip: we fill this in from your student number.</p>
+          </div>
+          <div class="form-group">
+            <label for="faculty">Faculty <span class="req" aria-hidden="true">*</span></label>
+            <select id="faculty" name="faculty" required>
+                  <option value="">Select your faculty</option>
+                  <option>Computing and Informatics</option>
+                  <option>Engineering and the Built Environment</option>
+                  <option>Health, Natural Resources and Applied Sciences</option>
+                  <option>Commerce, Human Sciences and Education</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="password">Password <span class="req" aria-hidden="true">*</span></label>
+            <div class="password-wrap">
+              <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" required>
+              <button type="button" aria-label="Show password">Show</button>
+            </div>
+            <div class="strength" id="strength" data-level="0" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <p class="hint" id="strength-label">8+ characters with upper case, lower case and a number.</p>
+          </div>
+          <div class="form-group">
+            <label for="confirm_password">Confirm password <span class="req" aria-hidden="true">*</span></label>
+            <input type="password" id="confirm_password" name="confirm_password" autocomplete="new-password" required>
+          </div>
+          <div class="form-group">
+            <label class="check"><input type="checkbox" id="terms" name="terms" required> <span>I agree to use CampusPulse responsibly and follow the NUST code of conduct.</span></label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Create account</button>
+        </form>
+        <p class="form-footer">Already have an account? <a href="/login.html">Log in</a></p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

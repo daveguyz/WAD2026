@@ -1,0 +1,104 @@
+/* =====================================================================
+   CampusPulse  |  css/admin.css
+   Layout for the administration panel (sidebar + content) using CSS Grid.
+   Loaded after style.css and re-uses its design tokens.
+   ===================================================================== */
+.admin-body { background: var(--grey-100); }
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  background: var(--navy-900);
+  color: #b9c6e0;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.admin-sidebar .brand { color: var(--white); }
+.admin-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--amber-500); margin: 6px 0 24px; font-weight: 700; }
+.admin-sidebar ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+.admin-sidebar nav a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  color: #b9c6e0;
+  font-weight: 600;
+}
+.admin-sidebar nav a:hover { background: rgba(255, 255, 255, 0.06); color: var(--white); }
+.admin-sidebar nav a.active { background: var(--navy-700); color: var(--white); }
+.pill { background: var(--amber-500); color: var(--navy-900); border-radius: 999px; font-size: 0.72rem; padding: 1px 8px; font-weight: 800; }
+.pill[hidden] { display: none; }
+.admin-sidebar-foot { margin-top: auto; }
+.admin-sidebar-foot a { color: #b9c6e0; font-size: 0.9rem; }
+
+/* Main area */
+.admin-main { display: flex; flex-direction: column; min-width: 0; }
+.admin-topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 28px;
+  background: var(--white);
+  border-bottom: 1px solid var(--grey-200);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.admin-topbar h1 { font-size: 1.4rem; margin: 0; flex: 1; }
+.admin-content { padding: 28px; }
+.admin-section[hidden] { display: none; }
+
+.toolbar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.toolbar input[type="search"] { flex: 1; min-width: 200px; }
+.toolbar select { width: auto; }
+.toolbar .btn { margin-left: auto; }
+
+/* Simple bar chart built with Flexbox */
+.bar-chart { display: grid; gap: 10px; }
+.bar-row { display: grid; grid-template-columns: 130px 1fr 32px; gap: 10px; align-items: center; font-size: 0.88rem; }
+.bar-track { background: var(--grey-100); border-radius: 999px; height: 12px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 999px; background: var(--cat, var(--navy-800)); transition: width 0.6s ease; }
+
+.top-list { margin: 0; padding-left: 1.2rem; display: grid; gap: 10px; }
+.top-list li span { color: var(--grey-500); font-size: 0.85rem; }
+
+.colour-swatch { width: 26px; height: 26px; border-radius: 6px; display: inline-block; border: 1px solid var(--grey-300); background: var(--cat); }
+
+.message-card { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 12px; }
+.message-card.unread { border-left: 4px solid var(--amber-500); }
+.message-card header { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.message-card p { white-space: pre-line; margin-bottom: 12px; }
+
+.admin-menu-btn { display: none; }
+
+@media (max-width: 900px) {
+  .admin-layout { grid-template-columns: 1fr; }
+  .admin-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+  .admin-sidebar.open { transform: none; box-shadow: var(--shadow-lg); }
+  .admin-menu-btn { display: inline-block; }
+  .admin-content { padding: 18px; }
+  .admin-topbar { padding: 12px 18px; }
+  .admin-topbar .name { display: none; }
+}
+@media (max-width: 600px) {
+  .bar-row { grid-template-columns: 90px 1fr 28px; }
+  .toolbar .btn { margin-left: 0; width: 100%; }
+}

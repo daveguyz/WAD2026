@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit your club, society or student event to CampusPulse.">
+  <meta name="theme-color" content="#0b2a5b">
+  <title>Host an event | CampusPulse - NUST Campus Connect</title>
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/js/validation.js" defer></script>
+  <script src="/js/submit-event.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/index.html" aria-label="CampusPulse home">
+        <img src="/images/logo.svg" alt="" width="38" height="38">
+        <span>Campus<b>Pulse</b></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/submit-event.html">Host an Event</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-auth" id="nav-auth"></div>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="/index.html">Home</a></li><li><a href="/dashboard.html">Dashboard</a></li><li aria-current="page">Host an event</li></ol></nav>
+        <h1 id="form-title">Host an event</h1>
+        <p id="form-intro">Tell students what's happening. Submitted events are reviewed by an administrator before they are published.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form class="card form-card wide" id="event-form" novalidate>
+          <div class="alert alert-error" id="form-alert" role="alert" hidden></div>
+
+          <fieldset>
+            <legend>1. Event basics</legend>
+            <div class="form-group">
+              <label for="title">Event title <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="title" name="title" maxlength="120" required data-counter="title-count" placeholder="e.g. Web Dev Bootcamp">
+              <p class="char-count" id="title-count"></p>
+            </div>
+            <div class="form-group">
+              <label for="summary">Short summary <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="summary" name="summary" maxlength="200" required data-counter="summary-count" placeholder="One sentence shown on the event card">
+              <p class="char-count" id="summary-count"></p>
+            </div>
+            <div class="form-group">
+              <label for="description">Full description <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="description" name="description" rows="6" maxlength="3000" required data-counter="desc-count" placeholder="What will happen, who should attend, what to bring..."></textarea>
+              <p class="char-count" id="desc-count"></p>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="category_id">Category <span class="req" aria-hidden="true">*</span></label>
+                <select id="category_id" name="category_id" required><option value="">Choose a category</option></select>
+              </div>
+              <div class="form-group">
+                <label for="venue_id">Venue <span class="req" aria-hidden="true">*</span></label>
+                <select id="venue_id" name="venue_id" required><option value="">Choose a venue</option></select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Date &amp; time</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="start_datetime">Starts <span class="req" aria-hidden="true">*</span></label>
+                <input type="datetime-local" id="start_datetime" name="start_datetime" required>
+              </div>
+              <div class="form-group">
+                <label for="end_datetime">Ends <span class="req" aria-hidden="true">*</span></label>
+                <input type="datetime-local" id="end_datetime" name="end_datetime" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Tickets &amp; capacity</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="capacity">Maximum attendees <span class="req" aria-hidden="true">*</span></label>
+                <input type="number" id="capacity" name="capacity" min="1" max="5000" step="1" value="50" required>
+                <p class="hint" id="venue-hint"></p>
+              </div>
+              <div class="form-group">
+                <span class="label-text"><strong class="text-small">Entry</strong></span>
+                <div class="radio-group mt-1" role="radiogroup" aria-label="Entry type">
+                  <label class="check"><input type="radio" name="entry" value="free" checked> Free</label>
+                  <label class="check"><input type="radio" name="entry" value="paid"> Paid</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group hidden" id="price-group">
+              <label for="ticket_price">Ticket price (N$) <span class="req" aria-hidden="true">*</span></label>
+              <input type="number" id="ticket_price" name="ticket_price" min="1" max="10000" step="0.50" placeholder="e.g. 30.00">
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label class="check"><input type="checkbox" id="confirm" name="confirm" required> <span>I confirm this event is approved by my club/society and follows NUST rules.</span></label>
+          </div>
+
+          <div class="form-actions">
+            <a class="btn btn-ghost" href="/dashboard.html">Cancel</a>
+            <button type="reset" class="btn btn-outline">Clear form</button>
+            <button type="submit" class="btn btn-primary" id="submit-btn">Submit event</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <a class="brand" href="/index.html"><img src="/images/logo.svg" alt="" width="34" height="34"><span>Campus<b>Pulse</b></span></a>
+          <p>The heartbeat of student life at NUST. Discover, host and register for campus events, clubs and activities in one place.</p>
+        </section>
+        <nav aria-label="Explore">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/events.html">Browse events</a></li>
+            <li><a href="/submit-event.html">Host an event</a></li>
+            <li><a href="/dashboard.html">My dashboard</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Information">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/about.html#faq">FAQ</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <section>
+          <h4>Contact</h4>
+          <address>
+            <span>Namibia University of Science and Technology</span>
+            <span>13 Jackson Kaujeua Street, Windhoek</span>
+            <a href="mailto:campuspulse@nust.na">campuspulse@nust.na</a>
+            <a href="tel:+26461207911">+264 61 207 9111</a>
+          </address>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span data-year>2026</span> CampusPulse &middot; WAD621S Group Project</p>
+        <p class="mb-0">Built with HTML, CSS, JavaScript, Node.js &amp; MySQL</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

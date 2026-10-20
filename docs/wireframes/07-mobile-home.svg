@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 1130" font-family="Comic Sans MS, Segoe Print, Arial, sans-serif" font-size="13">
+<rect width="390" height="1130" fill="#fff"/>
+<text x="10" y="28" font-size="18" font-weight="700" fill="#333">Wireframe: Home page (mobile, 390px)</text>
+<g transform="translate(0,40)"><rect x="1" y="1" width="388" height="1078" fill="#fafafa" stroke="#333" stroke-width="2"/>
+<rect x="0" y="0" width="390" height="56" fill="#f0f0f0" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="15" y="34" font-size="14" fill="#333" font-weight="400">[LOGO] CampusPulse</text>
+<rect x="230" y="13" width="80" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="270.0" y="33" text-anchor="middle">Sign up</text>
+<rect x="330" y="12" width="44" height="32" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="352.0" y="33.0" text-anchor="middle" fill="#444">☰</text>
+<rect x="0" y="56" width="390" height="330" fill="#dcdcdc" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="20" y="110" font-size="20" fill="#333" font-weight="700">HERO HEADLINE</text>
+<line x1="20" y1="135" x2="360" y2="135" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="20" y1="149" x2="326.0" y2="149" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="20" y1="163" x2="360" y2="163" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<rect x="20" y="185" width="350" height="36" fill="#fff" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="195.0" y="208.0" text-anchor="middle" fill="#444">search input</text>
+<rect x="20" y="228" width="350" height="36" fill="#fff" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="195.0" y="251.0" text-anchor="middle" fill="#444">[Search]</text>
+<text x="20" y="300" font-size="13" fill="#333" font-weight="400">[stat]  [stat]  [stat]</text>
+<text x="20" y="420" font-size="17" fill="#333" font-weight="700">Upcoming events</text>
+<rect x="20" y="435" width="130" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="85.0" y="455" text-anchor="middle">See all</text>
+<rect x="20" y="480" width="350" height="250" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<rect x="20" y="480" width="350" height="90" fill="#ddd" stroke="#555" stroke-width="1.5"/><line x1="20" y1="480" x2="370" y2="570" stroke="#888"/><line x1="370" y1="480" x2="20" y2="570" stroke="#888"/>
+<text x="195.0" y="530.0" text-anchor="middle" fill="#333" font-weight="700">category banner + date</text>
+<text x="32" y="595" font-size="15" fill="#333" font-weight="700">Event title</text>
+<line x1="32" y1="615" x2="342" y2="615" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="32" y1="629" x2="311.0" y2="629" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="32" y1="643" x2="342" y2="643" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<rect x="32" y="660" width="326" height="8" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="32" y="705" font-size="13" fill="#333" font-weight="400">Price</text>
+<rect x="258" y="685" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="308.0" y="705" text-anchor="middle">View details</text>
+<rect x="20" y="745" width="350" height="250" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<rect x="20" y="745" width="350" height="90" fill="#ddd" stroke="#555" stroke-width="1.5"/><line x1="20" y1="745" x2="370" y2="835" stroke="#888"/><line x1="370" y1="745" x2="20" y2="835" stroke="#888"/>
+<text x="195.0" y="795.0" text-anchor="middle" fill="#333" font-weight="700">category banner + date</text>
+<text x="100" y="1050" font-size="13" fill="#333" font-weight="400">... cards stack in 1 column ...</text>
+</g></svg>

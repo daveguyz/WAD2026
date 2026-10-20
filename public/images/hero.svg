@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 420" role="img" aria-label="Students at a campus event">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5a524"/><stop offset="1" stop-color="#ffcf70"/></linearGradient>
+  </defs>
+  <circle cx="250" cy="200" r="170" fill="#123a7a" opacity=".6"/>
+  <!-- stage / building -->
+  <rect x="110" y="120" width="260" height="170" rx="18" fill="#ffffff"/>
+  <rect x="110" y="120" width="260" height="46" rx="18" fill="url(#g1)"/>
+  <rect x="110" y="148" width="260" height="18" fill="url(#g1)"/>
+  <text x="240" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#071c3d">CAMPUS EVENTS</text>
+  <!-- calendar grid -->
+  <g fill="#e6ecf7">
+    <rect x="134" y="182" width="40" height="30" rx="6"/><rect x="184" y="182" width="40" height="30" rx="6"/><rect x="234" y="182" width="40" height="30" rx="6" fill="#f5a524"/><rect x="284" y="182" width="40" height="30" rx="6"/>
+    <rect x="134" y="222" width="40" height="30" rx="6"/><rect x="184" y="222" width="40" height="30" rx="6" fill="#0f8a5f"/><rect x="234" y="222" width="40" height="30" rx="6"/><rect x="284" y="222" width="40" height="30" rx="6" fill="#7a3db8"/>
+  </g>
+  <rect x="334" y="182" width="16" height="70" rx="6" fill="#e6ecf7"/>
+  <!-- people -->
+  <g>
+    <circle cx="120" cy="300" r="22" fill="#8d5524"/><rect x="92" y="324" width="56" height="72" rx="24" fill="#f5a524"/>
+    <circle cx="200" cy="312" r="22" fill="#c68642"/><rect x="172" y="336" width="56" height="64" rx="24" fill="#0f8a5f"/>
+    <circle cx="280" cy="306" r="22" fill="#5c3a1e"/><rect x="252" y="330" width="56" height="70" rx="24" fill="#ffffff"/>
+    <circle cx="360" cy="300" r="22" fill="#e0ac69"/><rect x="332" y="324" width="56" height="72" rx="24" fill="#be185d"/>
+  </g>
+  <!-- confetti -->
+  <g fill="#f5a524"><circle cx="70" cy="90" r="6"/><circle cx="420" cy="110" r="5"/><rect x="400" y="60" width="10" height="10" rx="2" transform="rotate(20 405 65)"/></g>
+  <g fill="#ffffff" opacity=".8"><circle cx="90" cy="180" r="4"/><circle cx="430" cy="230" r="4"/><circle cx="160" cy="70" r="3"/></g>
+  <!-- pin -->
+  <path d="M410 300c0-22-18-40-40-40" stroke="#fff" stroke-width="3" fill="none" stroke-dasharray="6 6" opacity=".5"/>
+</svg>

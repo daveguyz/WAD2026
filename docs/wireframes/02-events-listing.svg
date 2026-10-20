@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1090" font-family="Comic Sans MS, Segoe Print, Arial, sans-serif" font-size="13">
+<rect width="1000" height="1090" fill="#fff"/>
+<text x="10" y="28" font-size="18" font-weight="700" fill="#333">Wireframe: Events listing with search & filters</text>
+<g transform="translate(0,40)"><rect x="1" y="1" width="998" height="1038" fill="#fafafa" stroke="#333" stroke-width="2"/>
+<rect x="0" y="0" width="1000" height="56" fill="#f0f0f0" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="20" y="34" font-size="15" fill="#333" font-weight="700">[LOGO] CampusPulse</text>
+<text x="350.0" y="34" font-size="13" fill="#333" font-weight="400">Home   Events   Host an Event   About   Contact</text>
+<rect x="810" y="13" width="70" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="845.0" y="33" text-anchor="middle">Log in</text>
+<rect x="890" y="13" width="90" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="935.0" y="33" text-anchor="middle">Sign up</text>
+<rect x="0" y="56" width="1000" height="140" fill="#dcdcdc" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="500.0" y="131.0" text-anchor="middle" fill="#444">PAGE BANNER: breadcrumb + "Campus events" + intro</text>
+<rect x="40" y="180" width="920" height="70" fill="#fff" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="55" y="204" font-size="11" fill="#555">Search</text><rect x="55" y="210" width="330" height="28" fill="#fff" stroke="#777" rx="3"/>
+<text x="400" y="204" font-size="11" fill="#555">Category</text><rect x="400" y="210" width="130" height="28" fill="#fff" stroke="#777" rx="3"/>
+<text x="540" y="204" font-size="11" fill="#555">Venue</text><rect x="540" y="210" width="130" height="28" fill="#fff" stroke="#777" rx="3"/>
+<text x="680" y="204" font-size="11" fill="#555">When</text><rect x="680" y="210" width="130" height="28" fill="#fff" stroke="#777" rx="3"/>
+<text x="820" y="204" font-size="11" fill="#555">Price</text><rect x="820" y="210" width="125" height="28" fill="#fff" stroke="#777" rx="3"/>
+<rect x="40" y="270" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="90.0" y="290" text-anchor="middle">All</text>
+<rect x="150" y="270" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="200.0" y="290" text-anchor="middle">Academic</text>
+<rect x="260" y="270" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="310.0" y="290" text-anchor="middle">Sports</text>
+<rect x="370" y="270" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="420.0" y="290" text-anchor="middle">Careers</text>
+<rect x="480" y="270" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="530.0" y="290" text-anchor="middle">Tech</text>
+<rect x="590" y="270" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="640.0" y="290" text-anchor="middle">Arts</text>
+<rect x="700" y="270" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="750.0" y="290" text-anchor="middle">Clubs</text>
+<rect x="810" y="270" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="860.0" y="290" text-anchor="middle">Wellness</text>
+<text x="40" y="335" font-size="13" fill="#333" font-weight="400">Showing X of Y events</text>
+<text x="600" y="335" font-size="13" fill="#333" font-weight="400">Sort [v]   [Grid|Table]   Clear filters</text>
+<rect x="40" y="355" width="280" height="250" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<rect x="40" y="355" width="280" height="90" fill="#ddd" stroke="#555" stroke-width="1.5"/><line x1="40" y1="355" x2="320" y2="445" stroke="#888"/><line x1="320" y1="355" x2="40" y2="445" stroke="#888"/>
+<text x="180.0" y="405.0" text-anchor="middle" fill="#333" font-weight="700">category banner + date</text>
+<text x="52" y="470" font-size="15" fill="#333" font-weight="700">Event title</text>
+<line x1="52" y1="490" x2="292" y2="490" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="52" y1="504" x2="268.0" y2="504" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="52" y1="518" x2="292" y2="518" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<rect x="52" y="535" width="256" height="8" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="52" y="580" font-size="13" fill="#333" font-weight="400">Price</text>
+<rect x="208" y="560" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="258.0" y="580" text-anchor="middle">View details</text>
+<rect x="350" y="355" width="280" height="250" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<rect x="350" y="355" width="280" height="90" fill="#ddd" stroke="#555" stroke-width="1.5"/><line x1="350" y1="355" x2="630" y2="445" stroke="#888"/><line x1="630" y1="355" x2="350" y2="445" stroke="#888"/>
+<text x="490.0" y="405.0" text-anchor="middle" fill="#333" font-weight="700">category banner + date</text>
+<text x="362" y="470" font-size="15" fill="#333" font-weight="700">Event title</text>
+<line x1="362" y1="490" x2="602" y2="490" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="362" y1="504" x2="578.0" y2="504" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="362" y1="518" x2="602" y2="518" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<rect x="362" y="535" width="256" height="8" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="362" y="580" font-size="13" fill="#333" font-weight="400">Price</text>
+<rect x="518" y="560" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="568.0" y="580" text-anchor="middle">View details</text>
+<rect x="660" y="355" width="280" height="250" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<rect x="660" y="355" width="280" height="90" fill="#ddd" stroke="#555" stroke-width="1.5"/><line x1="660" y1="355" x2="940" y2="445" stroke="#888"/><line x1="940" y1="355" x2="660" y2="445" stroke="#888"/>
+<text x="800.0" y="405.0" text-anchor="middle" fill="#333" font-weight="700">category banner + date</text>
+<text x="672" y="470" font-size="15" fill="#333" font-weight="700">Event title</text>
+<line x1="672" y1="490" x2="912" y2="490" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="672" y1="504" x2="888.0" y2="504" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="672" y1="518" x2="912" y2="518" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<rect x="672" y="535" width="256" height="8" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="672" y="580" font-size="13" fill="#333" font-weight="400">Price</text>
+<rect x="828" y="560" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="878.0" y="580" text-anchor="middle">View details</text>
+<rect x="40" y="625" width="280" height="250" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<rect x="40" y="625" width="280" height="90" fill="#ddd" stroke="#555" stroke-width="1.5"/><line x1="40" y1="625" x2="320" y2="715" stroke="#888"/><line x1="320" y1="625" x2="40" y2="715" stroke="#888"/>
+<text x="180.0" y="675.0" text-anchor="middle" fill="#333" font-weight="700">category banner + date</text>
+<text x="52" y="740" font-size="15" fill="#333" font-weight="700">Event title</text>
+<line x1="52" y1="760" x2="292" y2="760" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="52" y1="774" x2="268.0" y2="774" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="52" y1="788" x2="292" y2="788" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<rect x="52" y="805" width="256" height="8" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="52" y="850" font-size="13" fill="#333" font-weight="400">Price</text>
+<rect x="208" y="830" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="258.0" y="850" text-anchor="middle">View details</text>
+<rect x="350" y="625" width="280" height="250" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<rect x="350" y="625" width="280" height="90" fill="#ddd" stroke="#555" stroke-width="1.5"/><line x1="350" y1="625" x2="630" y2="715" stroke="#888"/><line x1="630" y1="625" x2="350" y2="715" stroke="#888"/>
+<text x="490.0" y="675.0" text-anchor="middle" fill="#333" font-weight="700">category banner + date</text>
+<text x="362" y="740" font-size="15" fill="#333" font-weight="700">Event title</text>
+<line x1="362" y1="760" x2="602" y2="760" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="362" y1="774" x2="578.0" y2="774" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="362" y1="788" x2="602" y2="788" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<rect x="362" y="805" width="256" height="8" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="362" y="850" font-size="13" fill="#333" font-weight="400">Price</text>
+<rect x="518" y="830" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="568.0" y="850" text-anchor="middle">View details</text>
+<rect x="660" y="625" width="280" height="250" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<rect x="660" y="625" width="280" height="90" fill="#ddd" stroke="#555" stroke-width="1.5"/><line x1="660" y1="625" x2="940" y2="715" stroke="#888"/><line x1="940" y1="625" x2="660" y2="715" stroke="#888"/>
+<text x="800.0" y="675.0" text-anchor="middle" fill="#333" font-weight="700">category banner + date</text>
+<text x="672" y="740" font-size="15" fill="#333" font-weight="700">Event title</text>
+<line x1="672" y1="760" x2="912" y2="760" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="672" y1="774" x2="888.0" y2="774" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="672" y1="788" x2="912" y2="788" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<rect x="672" y="805" width="256" height="8" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="672" y="850" font-size="13" fill="#333" font-weight="400">Price</text>
+<rect x="828" y="830" width="100" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="878.0" y="850" text-anchor="middle">View details</text>
+<text x="420" y="925" font-size="14" fill="#333" font-weight="400">[<] [1] [2] [3] [>]   pagination</text>
+<rect x="0" y="950" width="1000" height="90" fill="#e0e0e0" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="500.0" y="976.0" text-anchor="middle" fill="#444">FOOTER: brand + about </text>
+<text x="500.0" y="992.0" text-anchor="middle" fill="#444"> Explore links </text>
+<text x="500.0" y="1008.0" text-anchor="middle" fill="#444"> Information links </text>
+<text x="500.0" y="1024.0" text-anchor="middle" fill="#444"> Contact address</text>
+</g></svg>

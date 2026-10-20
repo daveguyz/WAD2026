@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search and filter all upcoming NUST campus events by category, venue, date and price.">
+  <meta name="theme-color" content="#0b2a5b">
+  <title>Events | CampusPulse - NUST Campus Connect</title>
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/js/events.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/index.html" aria-label="CampusPulse home">
+        <img src="/images/logo.svg" alt="" width="38" height="38">
+        <span>Campus<b>Pulse</b></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/submit-event.html">Host an Event</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-auth" id="nav-auth"></div>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="/index.html">Home</a></li><li aria-current="page">Events</li></ol></nav>
+        <h1>Campus events</h1>
+        <p>Search, filter and register for what's happening at NUST.</p>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <form class="filters" id="filter-form" role="search" aria-label="Filter events">
+          <div class="filter-search">
+            <label for="f-q">Search</label>
+            <input type="search" id="f-q" name="q" placeholder="Title, keyword or venue..." autocomplete="off">
+          </div>
+          <div>
+            <label for="f-category">Category</label>
+            <select id="f-category" name="category"><option value="">All categories</option></select>
+          </div>
+          <div>
+            <label for="f-venue">Venue</label>
+            <select id="f-venue" name="venue"><option value="">All venues</option></select>
+          </div>
+          <div>
+            <label for="f-when">When</label>
+            <select id="f-when" name="when">
+              <option value="upcoming">Upcoming</option>
+              <option value="week">Next 7 days</option>
+              <option value="month">Next 30 days</option>
+              <option value="past">Past events</option>
+              <option value="all">All dates</option>
+            </select>
+          </div>
+          <div>
+            <label for="f-price">Price</label>
+            <select id="f-price" name="price">
+              <option value="">Any price</option>
+              <option value="free">Free only</option>
+              <option value="paid">Paid only</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="chips mt-3" id="category-chips" aria-label="Quick category filter"></div>
+
+        <div class="results-bar">
+          <p id="result-count" aria-live="polite">Loading events...</p>
+          <div class="flex-center flex-wrap">
+            <label for="f-sort" class="text-small text-muted">Sort by</label>
+            <select id="f-sort" name="sort" form="filter-form">
+              <option value="date_asc">Date (soonest)</option>
+              <option value="date_desc">Date (latest)</option>
+              <option value="popular">Most popular</option>
+              <option value="title">Title A-Z</option>
+            </select>
+            <div class="view-toggle" role="group" aria-label="Choose view">
+              <button type="button" class="active" data-view="grid" aria-pressed="true">Grid</button>
+              <button type="button" data-view="table" aria-pressed="false">Table</button>
+            </div>
+            <button type="button" class="btn btn-ghost btn-sm" id="clear-filters">Clear filters</button>
+          </div>
+        </div>
+
+        <div class="grid grid-3" id="event-grid"></div>
+
+        <div class="table-wrap hidden" id="event-table-wrap">
+          <table>
+            <caption class="visually-hidden">Events matching your filters</caption>
+            <thead>
+              <tr><th scope="col">Event</th><th scope="col">Category</th><th scope="col">Date</th><th scope="col">Venue</th><th scope="col">Seats</th><th scope="col">Price</th><th scope="col"><span class="visually-hidden">Action</span></th></tr>
+            </thead>
+            <tbody id="event-table-body"></tbody>
+          </table>
+        </div>
+
+        <nav class="pagination" id="pagination" aria-label="Pagination"></nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <a class="brand" href="/index.html"><img src="/images/logo.svg" alt="" width="34" height="34"><span>Campus<b>Pulse</b></span></a>
+          <p>The heartbeat of student life at NUST. Discover, host and register for campus events, clubs and activities in one place.</p>
+        </section>
+        <nav aria-label="Explore">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/events.html">Browse events</a></li>
+            <li><a href="/submit-event.html">Host an event</a></li>
+            <li><a href="/dashboard.html">My dashboard</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Information">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/about.html#faq">FAQ</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <section>
+          <h4>Contact</h4>
+          <address>
+            <span>Namibia University of Science and Technology</span>
+            <span>13 Jackson Kaujeua Street, Windhoek</span>
+            <a href="mailto:campuspulse@nust.na">campuspulse@nust.na</a>
+            <a href="tel:+26461207911">+264 61 207 9111</a>
+          </address>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span data-year>2026</span> CampusPulse &middot; WAD621S Group Project</p>
+        <p class="mb-0">Built with HTML, CSS, JavaScript, Node.js &amp; MySQL</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

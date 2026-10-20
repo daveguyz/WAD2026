@@ -1,0 +1,22 @@
+{
+  "name": "campuspulse",
+  "version": "1.0.0",
+  "description": "CampusPulse - NUST Campus Connect events and clubs web application (WAD621S 2026)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "setup-db": "node database/setup.js"
+  },
+  "keywords": ["nust", "campus", "events", "express", "mysql"],
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "helmet": "^7.2.0",
+    "mysql2": "^3.11.5"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusPulse administration panel.">
+  <meta name="theme-color" content="#0b2a5b">
+  <title>Admin panel | CampusPulse - NUST Campus Connect</title>
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/js/validation.js" defer></script>
+  <script src="/js/admin.js" defer></script>
+</head>
+<body class="admin-body">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar" id="admin-sidebar" aria-label="Admin navigation">
+      <a class="brand" href="/index.html"><img src="/images/logo.svg" alt="" width="34" height="34"><span>Campus<b>Pulse</b></span></a>
+      <p class="admin-tag">Admin panel</p>
+      <nav>
+        <ul>
+          <li><a href="#overview" data-section="overview" class="active">Overview</a></li>
+          <li><a href="#events" data-section="events">Events <span class="pill" id="pending-pill" hidden>0</span></a></li>
+          <li><a href="#users" data-section="users">Users</a></li>
+          <li><a href="#categories" data-section="categories">Categories</a></li>
+          <li><a href="#venues" data-section="venues">Venues</a></li>
+          <li><a href="#messages" data-section="messages">Messages <span class="pill" id="unread-pill" hidden>0</span></a></li>
+        </ul>
+      </nav>
+      <div class="admin-sidebar-foot">
+        <a href="/index.html">&larr; View site</a>
+        <button type="button" class="btn btn-light btn-sm btn-block mt-1" id="admin-logout">Log out</button>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <button type="button" class="nav-toggle admin-menu-btn" id="admin-menu-btn" aria-label="Open admin menu" aria-expanded="false"><span></span></button>
+        <h1 id="section-title">Overview</h1>
+        <div class="nav-user"><span class="avatar" id="admin-avatar">A</span><span class="name" id="admin-name">Admin</span></div>
+      </header>
+
+      <main id="main" class="admin-content">
+        <!-- OVERVIEW -->
+        <section class="admin-section" id="section-overview" aria-label="Overview">
+          <div class="grid grid-4 stats-grid">
+            <div class="stat-card"><div class="value" data-total="events">0</div><div class="label">Total events</div></div>
+            <div class="stat-card" style="--accent-colour:#c62828"><div class="value" data-total="pending">0</div><div class="label">Pending approval</div></div>
+            <div class="stat-card" style="--accent-colour:#0b2a5b"><div class="value" data-total="users">0</div><div class="label">Registered users</div></div>
+            <div class="stat-card" style="--accent-colour:#0f8a5f"><div class="value" data-total="registrations">0</div><div class="label">Event registrations</div></div>
+          </div>
+          <div class="grid grid-2 mt-3">
+            <div class="card">
+              <h2 class="h3">Events per category</h2>
+              <div id="category-bars" class="bar-chart"></div>
+            </div>
+            <div class="card">
+              <h2 class="h3">Most popular events</h2>
+              <ol id="top-events" class="top-list"></ol>
+            </div>
+          </div>
+          <div class="card mt-3">
+            <div class="flex-between"><h2 class="h3 mb-0">Waiting for approval</h2><a href="#events" data-section="events" data-status="pending" class="btn btn-sm btn-outline">Review all</a></div>
+            <div id="pending-list" class="mt-2"></div>
+          </div>
+        </section>
+
+        <!-- EVENTS -->
+        <section class="admin-section" id="section-events" aria-label="Manage events" hidden>
+          <div class="toolbar">
+            <input type="search" id="events-search" placeholder="Search title or organiser..." aria-label="Search events">
+            <select id="events-status" aria-label="Filter by status">
+              <option value="">All statuses</option>
+              <option value="pending">Pending</option>
+              <option value="approved">Approved</option>
+              <option value="rejected">Rejected</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+            <button type="button" class="btn btn-primary" id="add-event-btn">+ Add event</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Event</th><th scope="col">Date</th><th scope="col">Category</th><th scope="col">Seats</th><th scope="col">Status</th><th scope="col">Actions</th></tr></thead>
+              <tbody id="events-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- USERS -->
+        <section class="admin-section" id="section-users" aria-label="Manage users" hidden>
+          <div class="toolbar">
+            <input type="search" id="users-search" placeholder="Search name, email or student number..." aria-label="Search users">
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">User</th><th scope="col">Student no.</th><th scope="col">Faculty</th><th scope="col">Activity</th><th scope="col">Role</th><th scope="col">Actions</th></tr></thead>
+              <tbody id="users-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section class="admin-section" id="section-categories" aria-label="Manage categories" hidden>
+          <div class="toolbar"><button type="button" class="btn btn-primary" id="add-category-btn">+ Add category</button></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Colour</th><th scope="col">Name</th><th scope="col">Description</th><th scope="col">Upcoming</th><th scope="col">Actions</th></tr></thead>
+              <tbody id="categories-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- VENUES -->
+        <section class="admin-section" id="section-venues" aria-label="Manage venues" hidden>
+          <div class="toolbar"><button type="button" class="btn btn-primary" id="add-venue-btn">+ Add venue</button></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Name</th><th scope="col">Location</th><th scope="col">Capacity</th><th scope="col">Actions</th></tr></thead>
+              <tbody id="venues-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- MESSAGES -->
+        <section class="admin-section" id="section-messages" aria-label="Contact messages" hidden>
+          <div id="messages-list"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Event form modal (add + edit) -->
+  <dialog class="modal" id="event-modal" aria-labelledby="event-modal-title">
+    <div class="modal-head"><h2 id="event-modal-title">Add event</h2><button class="modal-close" type="button" data-close aria-label="Close">&times;</button></div>
+    <form class="modal-body" id="admin-event-form" novalidate>
+      <input type="hidden" name="event_id">
+      <div class="form-group"><label for="ae-title">Title</label><input type="text" id="ae-title" name="title" maxlength="120" required></div>
+      <div class="form-group"><label for="ae-summary">Summary</label><input type="text" id="ae-summary" name="summary" maxlength="200" required></div>
+      <div class="form-group"><label for="ae-description">Description</label><textarea id="ae-description" name="description" rows="4" required></textarea></div>
+      <div class="form-row">
+        <div class="form-group"><label for="ae-category">Category</label><select id="ae-category" name="category_id" required></select></div>
+        <div class="form-group"><label for="ae-venue">Venue</label><select id="ae-venue" name="venue_id" required></select></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label for="ae-start">Starts</label><input type="datetime-local" id="ae-start" name="start_datetime" required></div>
+        <div class="form-group"><label for="ae-end">Ends</label><input type="datetime-local" id="ae-end" name="end_datetime" required></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label for="ae-capacity">Capacity</label><input type="number" id="ae-capacity" name="capacity" min="1" max="5000" required></div>
+        <div class="form-group"><label for="ae-price">Ticket price (N$, 0 = free)</label><input type="number" id="ae-price" name="ticket_price" min="0" step="0.50" value="0"></div>
+      </div>
+      <div class="form-group"><label for="ae-status">Status</label>
+        <select id="ae-status" name="status"><option value="approved">Approved</option><option value="pending">Pending</option><option value="rejected">Rejected</option><option value="cancelled">Cancelled</option></select>
+      </div>
+      <div class="form-actions"><button type="button" class="btn btn-ghost" data-close>Cancel</button><button type="submit" class="btn btn-primary">Save event</button></div>
+    </form>
+  </dialog>
+
+  <!-- Category modal -->
+  <dialog class="modal small" id="category-modal" aria-labelledby="category-modal-title">
+    <div class="modal-head"><h2 id="category-modal-title">Add category</h2><button class="modal-close" type="button" data-close aria-label="Close">&times;</button></div>
+    <form class="modal-body" id="category-form" novalidate>
+      <input type="hidden" name="category_id">
+      <div class="form-group"><label for="c-name">Name</label><input type="text" id="c-name" name="name" maxlength="50" required></div>
+      <div class="form-group"><label for="c-description">Description</label><input type="text" id="c-description" name="description" maxlength="255"></div>
+      <div class="form-group"><label for="c-colour">Colour</label><input type="color" id="c-colour" name="colour" value="#0b3d91"></div>
+      <div class="form-actions"><button type="button" class="btn btn-ghost" data-close>Cancel</button><button type="submit" class="btn btn-primary">Save</button></div>
+    </form>
+  </dialog>
+
+  <!-- Venue modal -->
+  <dialog class="modal small" id="venue-modal" aria-labelledby="venue-modal-title">
+    <div class="modal-head"><h2 id="venue-modal-title">Add venue</h2><button class="modal-close" type="button" data-close aria-label="Close">&times;</button></div>
+    <form class="modal-body" id="venue-form" novalidate>
+      <input type="hidden" name="venue_id">
+      <div class="form-group"><label for="v-name">Name</label><input type="text" id="v-name" name="name" maxlength="100" required></div>
+      <div class="form-group"><label for="v-location">Location</label><input type="text" id="v-location" name="location" maxlength="150"></div>
+      <div class="form-group"><label for="v-capacity">Capacity</label><input type="number" id="v-capacity" name="capacity" min="1"></div>
+      <div class="form-actions"><button type="button" class="btn btn-ghost" data-close>Cancel</button><button type="submit" class="btn btn-primary">Save</button></div>
+    </form>
+  </dialog>
+
+  <!-- Attendees modal -->
+  <dialog class="modal" id="attendees-modal" aria-labelledby="attendees-title">
+    <div class="modal-head"><h2 id="attendees-title">Attendees</h2><button class="modal-close" type="button" data-close aria-label="Close">&times;</button></div>
+    <div class="modal-body" id="attendees-body"></div>
+  </dialog>
+
+  <!-- Confirm modal -->
+  <dialog class="modal small" id="confirm-modal" aria-labelledby="confirm-title">
+    <div class="modal-head"><h2 id="confirm-title">Please confirm</h2><button class="modal-close" type="button" data-close aria-label="Close">&times;</button></div>
+    <div class="modal-body">
+      <p id="confirm-text"></p>
+      <div class="form-actions"><button class="btn btn-ghost" type="button" data-close>Cancel</button><button class="btn btn-danger" type="button" id="confirm-yes">Delete</button></div>
+    </div>
+  </dialog>
+</body>
+</html>

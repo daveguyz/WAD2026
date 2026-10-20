@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Full details of a NUST campus event, with registration.">
+  <meta name="theme-color" content="#0b2a5b">
+  <title>Event details | CampusPulse - NUST Campus Connect</title>
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/js/event.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/index.html" aria-label="CampusPulse home">
+        <img src="/images/logo.svg" alt="" width="38" height="38">
+        <span>Campus<b>Pulse</b></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/submit-event.html">Host an Event</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-auth" id="nav-auth"></div>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="event-root">
+      <div class="container"><div class="loader" role="status" aria-label="Loading event"></div></div>
+    </div>
+
+    <template id="event-template">
+      <section class="event-hero">
+        <div class="container">
+          <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="/index.html">Home</a></li><li><a href="/events.html">Events</a></li><li aria-current="page" data-field="crumb"></li></ol></nav>
+          <div class="flex-center flex-wrap mb-2">
+            <span class="badge badge-category" data-field="category"></span>
+            <span class="badge" data-field="status"></span>
+          </div>
+          <h1 data-field="title"></h1>
+          <p data-field="summary"></p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container details-layout">
+          <article class="card">
+            <h2>About this event</h2>
+            <p data-field="description"></p>
+            <h2 class="mt-3">Organised by</h2>
+            <p class="flex-center"><span class="avatar" data-field="org-initials"></span><span data-field="organiser"></span></p>
+            <div id="related-wrap" class="mt-4">
+              <h2>More in <span data-field="category-name"></span></h2>
+              <div class="grid grid-2" id="related-grid"></div>
+            </div>
+          </article>
+
+          <aside class="card sticky-card" aria-label="Event information and registration">
+            <div class="countdown" id="countdown" aria-label="Time until the event starts">
+              <div><strong data-cd="d">0</strong><span>Days</span></div>
+              <div><strong data-cd="h">0</strong><span>Hours</span></div>
+              <div><strong data-cd="m">0</strong><span>Mins</span></div>
+              <div><strong data-cd="s">0</strong><span>Secs</span></div>
+            </div>
+            <ul class="info-list">
+              <li data-icon="calendar"><div><strong>Date</strong><span data-field="date"></span></div></li>
+              <li data-icon="clock"><div><strong>Time</strong><span data-field="time"></span></div></li>
+              <li data-icon="pin"><div><strong>Venue</strong><span data-field="venue"></span><br><small class="text-muted" data-field="venue-location"></small></div></li>
+              <li data-icon="ticket"><div><strong>Entry</strong><span data-field="price"></span></div></li>
+              <li data-icon="users"><div><strong>Attendance</strong><span data-field="seats"></span><div class="progress"><span data-field="progress"></span></div></div></li>
+            </ul>
+            <div id="register-area"></div>
+            <button type="button" class="btn btn-ghost btn-block mt-1" id="share-btn">Copy link to share</button>
+          </aside>
+        </div>
+      </section>
+    </template>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <a class="brand" href="/index.html"><img src="/images/logo.svg" alt="" width="34" height="34"><span>Campus<b>Pulse</b></span></a>
+          <p>The heartbeat of student life at NUST. Discover, host and register for campus events, clubs and activities in one place.</p>
+        </section>
+        <nav aria-label="Explore">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/events.html">Browse events</a></li>
+            <li><a href="/submit-event.html">Host an event</a></li>
+            <li><a href="/dashboard.html">My dashboard</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Information">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/about.html#faq">FAQ</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <section>
+          <h4>Contact</h4>
+          <address>
+            <span>Namibia University of Science and Technology</span>
+            <span>13 Jackson Kaujeua Street, Windhoek</span>
+            <a href="mailto:campuspulse@nust.na">campuspulse@nust.na</a>
+            <a href="tel:+26461207911">+264 61 207 9111</a>
+          </address>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span data-year>2026</span> CampusPulse &middot; WAD621S Group Project</p>
+        <p class="mb-0">Built with HTML, CSS, JavaScript, Node.js &amp; MySQL</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

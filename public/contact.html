@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact the CampusPulse team with questions, suggestions or partnership requests.">
+  <meta name="theme-color" content="#0b2a5b">
+  <title>Contact | CampusPulse - NUST Campus Connect</title>
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/js/validation.js" defer></script>
+  <script src="/js/contact.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/index.html" aria-label="CampusPulse home">
+        <img src="/images/logo.svg" alt="" width="38" height="38">
+        <span>Campus<b>Pulse</b></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/submit-event.html">Host an Event</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-auth" id="nav-auth"></div>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="/index.html">Home</a></li><li aria-current="page">Contact</li></ol></nav>
+        <h1>Contact us</h1>
+        <p>Questions, suggestions or problems? We'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <div>
+          <h2>Get in touch</h2>
+          <p class="text-muted">Our team is based in the Student Affairs office on NUST main campus. We usually reply within two working days.</p>
+          <ul class="info-list card">
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><strong>Visit</strong><address>Student Affairs, NUST Main Campus<br>13 Jackson Kaujeua Street, Windhoek, Namibia</address></div>
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+              <div><strong>Email</strong><a href="mailto:campuspulse@nust.na">campuspulse@nust.na</a></div>
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+              <div><strong>Phone</strong><a href="tel:+26461207911">+264 61 207 9111</a></div>
+            </li>
+          </ul>
+          <h3 class="mt-3">Office hours</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Day</th><th scope="col">Hours</th></tr></thead>
+              <tbody>
+                <tr><td>Monday - Thursday</td><td>08:00 - 17:00</td></tr>
+                <tr><td>Friday</td><td>08:00 - 13:00</td></tr>
+                <tr><td>Weekends &amp; public holidays</td><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <form class="card" id="contact-form" novalidate>
+          <h2 class="h3">Send a message</h2>
+          <div class="alert" id="form-alert" role="alert" hidden></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" maxlength="100" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject <span class="req" aria-hidden="true">*</span></label>
+            <select id="subject" name="subject" required>
+              <option value="">Choose a subject</option>
+              <option>General question</option>
+              <option>Suggestion</option>
+              <option>Problem with an event</option>
+              <option>Technical issue</option>
+              <option>Partnership</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="6" maxlength="2000" required data-counter="msg-count"></textarea>
+            <p class="char-count" id="msg-count"></p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <a class="brand" href="/index.html"><img src="/images/logo.svg" alt="" width="34" height="34"><span>Campus<b>Pulse</b></span></a>
+          <p>The heartbeat of student life at NUST. Discover, host and register for campus events, clubs and activities in one place.</p>
+        </section>
+        <nav aria-label="Explore">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/events.html">Browse events</a></li>
+            <li><a href="/submit-event.html">Host an event</a></li>
+            <li><a href="/dashboard.html">My dashboard</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Information">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/about.html#faq">FAQ</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <section>
+          <h4>Contact</h4>
+          <address>
+            <span>Namibia University of Science and Technology</span>
+            <span>13 Jackson Kaujeua Street, Windhoek</span>
+            <a href="mailto:campuspulse@nust.na">campuspulse@nust.na</a>
+            <a href="tel:+26461207911">+264 61 207 9111</a>
+          </address>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span data-year>2026</span> CampusPulse &middot; WAD621S Group Project</p>
+        <p class="mb-0">Built with HTML, CSS, JavaScript, Node.js &amp; MySQL</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

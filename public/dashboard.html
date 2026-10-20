@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your CampusPulse dashboard - registrations, hosted events and profile.">
+  <meta name="theme-color" content="#0b2a5b">
+  <title>My dashboard | CampusPulse - NUST Campus Connect</title>
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/js/validation.js" defer></script>
+  <script src="/js/dashboard.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/index.html" aria-label="CampusPulse home">
+        <img src="/images/logo.svg" alt="" width="38" height="38">
+        <span>Campus<b>Pulse</b></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/submit-event.html">Host an Event</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-auth" id="nav-auth"></div>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section-sm">
+      <div class="container">
+        <div class="dash-header">
+          <div class="flex-center">
+            <span class="avatar" id="dash-avatar">?</span>
+            <div>
+              <h1 class="mb-0" id="dash-greeting">Welcome</h1>
+              <p class="text-muted mb-0" id="dash-sub"></p>
+            </div>
+          </div>
+          <div class="flex flex-wrap">
+            <a class="btn btn-outline" href="/events.html">Find events</a>
+            <a class="btn btn-primary" href="/submit-event.html">+ Host an event</a>
+          </div>
+        </div>
+
+        <div class="grid grid-4 stats-grid mb-3">
+          <div class="stat-card"><div class="value" data-sum="upcoming">0</div><div class="label">Upcoming bookings</div></div>
+          <div class="stat-card" style="--accent-colour:#0f8a5f"><div class="value" data-sum="attended">0</div><div class="label">Events attended</div></div>
+          <div class="stat-card" style="--accent-colour:#0b2a5b"><div class="value" data-sum="submitted">0</div><div class="label">Events hosted</div></div>
+          <div class="stat-card" style="--accent-colour:#c62828"><div class="value" data-sum="pending">0</div><div class="label">Awaiting approval</div></div>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Dashboard sections">
+          <button class="tab active" role="tab" id="tab-bookings" aria-controls="panel-bookings" aria-selected="true">My bookings <span class="count" id="count-bookings">0</span></button>
+          <button class="tab" role="tab" id="tab-hosted" aria-controls="panel-hosted" aria-selected="false" tabindex="-1">My events <span class="count" id="count-hosted">0</span></button>
+          <button class="tab" role="tab" id="tab-profile" aria-controls="panel-profile" aria-selected="false" tabindex="-1">Profile</button>
+        </div>
+
+        <section class="tab-panel" id="panel-bookings" role="tabpanel" aria-labelledby="tab-bookings">
+          <div id="bookings-list"><div class="loader"></div></div>
+        </section>
+
+        <section class="tab-panel" id="panel-hosted" role="tabpanel" aria-labelledby="tab-hosted" hidden>
+          <div class="table-wrap">
+            <table>
+              <caption>Events you have submitted</caption>
+              <thead><tr><th scope="col">Event</th><th scope="col">Date</th><th scope="col">Status</th><th scope="col">Registrations</th><th scope="col">Actions</th></tr></thead>
+              <tbody id="hosted-body"><tr><td colspan="5">Loading...</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="panel-profile" role="tabpanel" aria-labelledby="tab-profile" hidden>
+          <div class="grid grid-2">
+            <form class="card" id="profile-form" novalidate>
+              <h2 class="h3">Personal details</h2>
+              <div class="form-group">
+                <label for="p-full_name">Full name</label>
+                <input type="text" id="p-full_name" name="full_name" maxlength="100" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="p-student_number">Student number</label>
+                  <input type="text" id="p-student_number" readonly disabled>
+                </div>
+                <div class="form-group">
+                  <label for="p-phone">Phone</label>
+                  <input type="tel" id="p-phone" name="phone">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="p-email">Email</label>
+                <input type="email" id="p-email" readonly disabled>
+              </div>
+              <div class="form-group">
+                <label for="p-faculty">Faculty</label>
+                <select id="p-faculty" name="faculty" required>
+                  <option value="">Select your faculty</option>
+                  <option>Computing and Informatics</option>
+                  <option>Engineering and the Built Environment</option>
+                  <option>Health, Natural Resources and Applied Sciences</option>
+                  <option>Commerce, Human Sciences and Education</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" type="submit">Save changes</button>
+            </form>
+
+            <form class="card" id="password-form" novalidate>
+              <h2 class="h3">Change password</h2>
+              <div class="form-group">
+                <label for="current_password">Current password</label>
+                <input type="password" id="current_password" name="current_password" autocomplete="current-password" required>
+              </div>
+              <div class="form-group">
+                <label for="new_password">New password</label>
+                <input type="password" id="new_password" name="new_password" autocomplete="new-password" required>
+              </div>
+              <div class="form-group">
+                <label for="confirm_new">Confirm new password</label>
+                <input type="password" id="confirm_new" name="confirm_new" autocomplete="new-password" required>
+              </div>
+              <button class="btn btn-outline" type="submit">Update password</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <dialog class="modal small" id="confirm-modal" aria-labelledby="confirm-title">
+      <div class="modal-head"><h2 id="confirm-title">Are you sure?</h2><button class="modal-close" type="button" data-close aria-label="Close">&times;</button></div>
+      <div class="modal-body">
+        <p id="confirm-text"></p>
+        <div class="form-actions"><button class="btn btn-ghost" type="button" data-close>Keep it</button><button class="btn btn-danger" type="button" id="confirm-yes">Yes, continue</button></div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <a class="brand" href="/index.html"><img src="/images/logo.svg" alt="" width="34" height="34"><span>Campus<b>Pulse</b></span></a>
+          <p>The heartbeat of student life at NUST. Discover, host and register for campus events, clubs and activities in one place.</p>
+        </section>
+        <nav aria-label="Explore">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/events.html">Browse events</a></li>
+            <li><a href="/submit-event.html">Host an event</a></li>
+            <li><a href="/dashboard.html">My dashboard</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Information">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/about.html#faq">FAQ</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <section>
+          <h4>Contact</h4>
+          <address>
+            <span>Namibia University of Science and Technology</span>
+            <span>13 Jackson Kaujeua Street, Windhoek</span>
+            <a href="mailto:campuspulse@nust.na">campuspulse@nust.na</a>
+            <a href="tel:+26461207911">+264 61 207 9111</a>
+          </address>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span data-year>2026</span> CampusPulse &middot; WAD621S Group Project</p>
+        <p class="mb-0">Built with HTML, CSS, JavaScript, Node.js &amp; MySQL</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

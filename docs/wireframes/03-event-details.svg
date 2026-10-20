@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 870" font-family="Comic Sans MS, Segoe Print, Arial, sans-serif" font-size="13">
+<rect width="1000" height="870" fill="#fff"/>
+<text x="10" y="28" font-size="18" font-weight="700" fill="#333">Wireframe: Event details page</text>
+<g transform="translate(0,40)"><rect x="1" y="1" width="998" height="818" fill="#fafafa" stroke="#333" stroke-width="2"/>
+<rect x="0" y="0" width="1000" height="56" fill="#f0f0f0" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="20" y="34" font-size="15" fill="#333" font-weight="700">[LOGO] CampusPulse</text>
+<text x="350.0" y="34" font-size="13" fill="#333" font-weight="400">Home   Events   Host an Event   About   Contact</text>
+<rect x="810" y="13" width="70" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="845.0" y="33" text-anchor="middle">Log in</text>
+<rect x="890" y="13" width="90" height="30" rx="15" fill="#fff" stroke="#333" stroke-width="1.5"/><text x="935.0" y="33" text-anchor="middle">Sign up</text>
+<rect x="0" y="56" width="1000" height="200" fill="#dcdcdc" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="500.0" y="137.0" text-anchor="middle" fill="#444">EVENT HERO (category colour): breadcrumb </text>
+<text x="500.0" y="153.0" text-anchor="middle" fill="#444"> category badge </text>
+<text x="500.0" y="169.0" text-anchor="middle" fill="#444"> EVENT TITLE </text>
+<text x="500.0" y="185.0" text-anchor="middle" fill="#444"> summary</text>
+<rect x="40" y="280" width="590" height="420" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="60" y="315" font-size="18" fill="#333" font-weight="700">About this event</text>
+<line x1="60" y1="335" x2="600" y2="335" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="60" y1="349" x2="546.0" y2="349" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="60" y1="363" x2="600" y2="363" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="60" y1="377" x2="546.0" y2="377" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="60" y1="391" x2="600" y2="391" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<line x1="60" y1="405" x2="546.0" y2="405" stroke="#aaa" stroke-width="5" stroke-linecap="round"/>
+<text x="60" y="450" font-size="14" fill="#333" font-weight="400">Organised by  (avatar) Name</text>
+<text x="60" y="500" font-size="16" fill="#333" font-weight="700">More in this category</text>
+<rect x="60" y="515" width="260" height="250" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<rect x="60" y="515" width="260" height="90" fill="#ddd" stroke="#555" stroke-width="1.5"/><line x1="60" y1="515" x2="320" y2="605" stroke="#888"/><line x1="320" y1="515" x2="60" y2="605" stroke="#888"/>
+<text x="190.0" y="565.0" text-anchor="middle" fill="#333" font-weight="700">category banner + date</text>
+<rect x="340" y="515" width="260" height="250" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<rect x="340" y="515" width="260" height="90" fill="#ddd" stroke="#555" stroke-width="1.5"/><line x1="340" y1="515" x2="600" y2="605" stroke="#888"/><line x1="600" y1="515" x2="340" y2="605" stroke="#888"/>
+<text x="470.0" y="565.0" text-anchor="middle" fill="#333" font-weight="700">category banner + date</text>
+<rect x="660" y="280" width="300" height="420" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<rect x="680" y="300" width="260" height="50" fill="#e9e9e9" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="810.0" y="306.0" text-anchor="middle" fill="#444">COUNTDOWN  d </text>
+<text x="810.0" y="322.0" text-anchor="middle" fill="#444"> h </text>
+<text x="810.0" y="338.0" text-anchor="middle" fill="#444"> m </text>
+<text x="810.0" y="354.0" text-anchor="middle" fill="#444"> s</text>
+<text x="680" y="390" font-size="13" fill="#333" font-weight="400">Date ............</text>
+<text x="680" y="420" font-size="13" fill="#333" font-weight="400">Time ............</text>
+<text x="680" y="450" font-size="13" fill="#333" font-weight="400">Venue ...........</text>
+<text x="680" y="480" font-size="13" fill="#333" font-weight="400">Entry ...........</text>
+<text x="680" y="510" font-size="13" fill="#333" font-weight="400">Attendance  [=====-----]</text>
+<rect x="680" y="560" width="260" height="40" fill="#cfcfcf" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="810.0" y="585.0" text-anchor="middle" fill="#444">[ Register for this event ]</text>
+<text x="740" y="640" font-size="13" fill="#333" font-weight="400">Copy link to share</text>
+<rect x="0" y="730" width="1000" height="90" fill="#e0e0e0" stroke="#555" stroke-width="1.5" rx="4"/>
+<text x="500.0" y="756.0" text-anchor="middle" fill="#444">FOOTER: brand + about </text>
+<text x="500.0" y="772.0" text-anchor="middle" fill="#444"> Explore links </text>
+<text x="500.0" y="788.0" text-anchor="middle" fill="#444"> Information links </text>
+<text x="500.0" y="804.0" text-anchor="middle" fill="#444"> Contact address</text>
+</g></svg>
