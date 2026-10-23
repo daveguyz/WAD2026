@@ -197,6 +197,6 @@ Referential actions: deleting a user cascades to their events and registrations;
 | Name | Student number | Role |
 |---|---|---|
 | Dawid /Howoseb | [Student No.] | Team lead & back end |
-| [Member name] | [Student No.] | Front end (HTML/CSS) |
+| [Saara Salomo ] | [224041320] | Front end (HTML/CSS) |
 | [Member name] | [Student No.] | JavaScript & UI |
 | [Member name] | [Student No.] | Database & testing |
